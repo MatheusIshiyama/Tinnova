@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 7rem);
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  grid-area: filter;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.filter select {
+  border: 0.1rem solid var(--border);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.infoButton,
+.addButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  grid-area: addButton;
+  padding: 0.4rem 0.5rem;
+  background-color: var(--surface);
+  border: 0.1rem solid var(--border);
+  border-radius: 0.2rem;
+  color: var(--text-on-brand);
+  text-decoration: none;
+}
+
+.addButton {
+  background-color: var(--brand);
+  color: var(--text-on-brand);
+}
+
+.vehicles {
+  grid-area: vehicles;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 550px) {
+  .infoButton,
+  .addButton {
+    width: 3rem;
+    height: 3rem;
+    gap: 0;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .infoButton p,
+  .addButton p {
+    max-width: 0;
+    overflow: hidden;
+  }
+
+  .vehicles {
+    grid-template-columns: auto;
+  }
+}

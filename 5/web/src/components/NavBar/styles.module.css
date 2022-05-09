@@ -1,0 +1,45 @@
+.navbar {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--brand);
+  padding: 1.5rem 4.5rem;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.arrowLeft {
+  color: var(--text-on-brand);
+  cursor: pointer;
+}
+
+.title {
+  grid-area: title;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text-on-brand);
+}
+
+.menu {
+  grid-area: menu;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+@media (max-width: 550px) {
+  .navbar {
+    grid-template-areas:
+      'title'
+      'menu';
+  }
+}
+
+@media (max-width: 550px) {
+  .navbar {
+    padding: 1rem 3rem;
+  }
+}

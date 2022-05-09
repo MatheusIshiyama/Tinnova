@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  min-height: calc(100vh - 7rem);
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+@media (max-width: 550px) {
+  .container {
+    padding: 0.5rem;
+  }
+}

@@ -1,0 +1,87 @@
+.card {
+  display: grid;
+  grid-template-rows: auto;
+  padding: 1rem 1.5rem;
+  max-width: 20rem;
+  max-height: 25rem;
+  gap: 0.5rem;
+  border: 0.1rem solid var(--border);
+  border-radius: 0.5rem;
+  background-color: var(--card);
+  color: var(--description);
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--title);
+}
+
+.id {
+  font-size: 0.8rem;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0.5rem;
+}
+
+.soldTag,
+.availableTag {
+  color: var(--text-on-brand);
+  padding: 0.2rem 0.4rem;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 0.2rem;
+}
+
+.availableTag {
+  background-color: var(--green);
+}
+
+.soldTag {
+  background-color: var(--red);
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.info p {
+  text-transform: capitalize;
+}
+
+.description {
+  text-overflow: clip;
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button,
+.buttonChangeStatus {
+  padding: 0.4rem 0.6rem;
+  background-color: var(--brand);
+  color: var(--text-on-brand);
+  border-radius: 0.2rem;
+  border: 0.1rem solid var(--border);
+  text-decoration: none;
+}
+
+.buttonChangeStatus {
+  background-color: var(--surface);
+}
+
+.info p,
+.description,
+.button,
+.buttonChangeStatus {
+  font-size: 0.9rem;
+}
