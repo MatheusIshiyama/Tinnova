@@ -8,6 +8,8 @@ export function VehicleRoutes(routes: Router) {
     .get(vehicleMiddleware.listVehicles, vehicleController.listVehicles)
     .post(vehicleMiddleware.createOrUpdateVehicle, vehicleController.createVehicle);
 
+  routes.route('/veiculos/status').get(vehicleController.vehiclesStatus);
+
   routes
     .route('/veiculos/:id')
     .get(vehicleController.getVehicleById)
